@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anime</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        
+        .spinner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 100vh;
+        }
+        .spinner .circle{
+            height: 30px;
+            width:30px;
+            border-radius: 50%;
+            color: red;
+            position: absolute;
+            animation: spin 2s ease infinite;
+            
+        }
+        .spinner :nth-child(1){
+            background-color:orange;
+            animation-delay: -1.5s;
+
+        }
+        .spinner :nth-child(2)
+        {
+            background-color: blue;
+            animation-delay: -1s;
+        }
+        
+        .spinner :nth-child(3)
+        {
+            background-color:black;
+            animation-delay: -0.5s;
+
+        }
+        .spinner :nth-child(4)
+        {
+            background-color:aqua;
+            animation-delay: 0s;
+        }
+        @keyframes spin{
+            0%{
+                transform: translate(0);
+            }
+            25%{
+                transform: translateX(48px);
+            }
+            50%{
+                transform: translate(48px,48px);
+            }
+            75%{
+                transform: translateY(48px);
+            }
+            100%{
+                transform: translate(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="spinner">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+</body>
+</html>
